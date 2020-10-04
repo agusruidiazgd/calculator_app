@@ -5,32 +5,40 @@ import './Calculator.scss';
 
 const Calculator = () =>{
 
-    const [number, setNumber] = useState(0);
+    const [data, setData] = useState(0);
+    const [operation, setOperation] = useState("");
+
     const btnNumbers = [1,2,3,4,5,6,7,8,9];
     const btnOperations = ["%","X","-","+","="];
 
+   
     return(
         <main className="main-container">
-            <Display number={number}/>
+            <Display data={data}/>
             <section className="section-container">
                 <div>
-                    <button className="large-btn">C</button>
+                    <button key="c" className="large-btn" onClick={()=>{setData(0)}}>C</button>
                     <div className="container-numbers">
                         {
                             btnNumbers.map(num=>{
                                 return(
-                                    <Button buttonNumber={num} buttonColor="btn grey"/>
+                                    <Button keys={num} value={num} data={data} setData={setData} buttonColor="btn grey"/>
                                 );
                             })
                         }
                     </div>
-                    <button className="large-btn">0</button>
+                    <button 
+                        key = "0"
+                        value = "0" 
+                        className = "large-btn" 
+                        onClick = {(e)=> data == 0 ? setData(Number(e.target.value)) : setData(Number(data + e.target.value))}
+                    >0</button>
                 </div>
                 <div className="container-operations">
                     {
                         btnOperations.map(op =>{
                             return(
-                                <Button buttonNumber={op} buttonColor="btn orange"/>
+                                <Button keys={op} value={op} data={operation} setData={setData} setOperation={setOperation} buttonColor="btn orange"/>
                             );
                         })
                     }

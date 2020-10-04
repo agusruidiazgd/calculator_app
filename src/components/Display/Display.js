@@ -1,9 +1,14 @@
 import React from 'react';
 import './Display.scss';
 
-const Display = ({number}) =>{
+const Display = ({data}) =>{
     return(
-        <input className="display" type="text" value={number}/>
+        <input 
+            className="display" 
+            type="text" 
+            value={data}
+
+        />
     );
 }
 
