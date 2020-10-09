@@ -6,8 +6,7 @@ const Display = ({data}) =>{
         <input 
             className="display" 
             type="text" 
-            value={data}
-
+            value = {data}
         />
     );
 }

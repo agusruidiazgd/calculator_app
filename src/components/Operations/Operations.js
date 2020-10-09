@@ -1,18 +1,14 @@
 
-export const operations = (operation,numberBefore,numberAfter) => {
+export const doOperation = (operation,memory,number) => {
     switch(operation){
         case "%":
-            return `${numberBefore} / ${numberAfter}`;
-            break;
+            return memory/number;
         case "X":
-            return `${numberBefore} * ${numberAfter}`;
-            break;
+            return memory*number;
         case "+":
-            return `${numberBefore} + ${numberAfter}`;
-            break;
+            return memory+number;
         case "-":
-            return `${numberBefore} - ${numberAfter}`;
-            break;
+            return memory-number;
         default:
             return alert('fallo :(');
     }
