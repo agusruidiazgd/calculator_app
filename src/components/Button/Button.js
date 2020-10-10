@@ -1,16 +1,15 @@
 import React from 'react';
 import './Button.scss';
+import {handleButtonPress} from '../Helpers/Helpers';
 
-
-const Button = ({keys, content, data, onClickButton, setData, buttonColor}) =>{
+const Button = ({keys, content, data, setData, memory, setMemory, operator, setOperator, buttonColor}) =>{
     
     return(
         <button 
-            key={keys}
-            value={content} 
+            keys={keys}
+            value={content.toString()} 
             className={buttonColor} 
-            //onClick={(e)=>{data === 0 ? setData(e.target.value) : setData(data + e.target.value)}}
-            onClick={(e) => onClickButton(e.target.value)}         
+            onClick={(e)=>{handleButtonPress(e.target.value,data, setData, memory, setMemory, operator, setOperator)}}       
         >
             {content}
         </button>
