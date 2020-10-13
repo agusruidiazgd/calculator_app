@@ -17,7 +17,7 @@ export const doOperation = (operation,memory,number,setMemory,setData) => {
             return setData(memory - number);
         default:
             setMemory(null);
-            return alert('fallo :(');
+            return alert('Presione una opera');
     }
 }
 
