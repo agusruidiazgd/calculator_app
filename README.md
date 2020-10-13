@@ -21,16 +21,20 @@ Si el browser no abre el proyecto automáticamente, ingresar a http://localhost:
 - JavaScript
 
 ## Estructura
--App.js
--Components
-    1. Button
-    1.1. Button.js
-    1.2. Button.scss
-    2. Calculator
-    2.1. Calculator.js
-    2.2. Calculator.scss
-    3. Display
-    3.1. Display.js
-    3.2. Display.scss
-    4. Helpers
-    4.1. Helpers.js 
+- App.js
+
+- Components
+1. Button
+Button.js
+Button.scss
+
+2. Calculator
+Calculator.js
+Calculator.scss
+
+3. Display
+Display.js
+Display.scss
+
+4. Helpers
+Helpers.js 
